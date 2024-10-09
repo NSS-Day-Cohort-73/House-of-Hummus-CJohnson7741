@@ -4,6 +4,7 @@ export const Sides =  async() => {
     const response = await fetch ("http://localhost:8088/sides")
     const sides = await response.json()
     
+    //sides change listener
     document.addEventListener("change", handleSidesChange);
 
     let html = "<h2>Sides</h2>";
@@ -21,7 +22,7 @@ export const Sides =  async() => {
     return html;
 }
 
-
+// sides change handler
 const handleSidesChange = (changeEvent) => {
     if (changeEvent.target.id === "sides") {
        const chosenOption = changeEvent.target.value

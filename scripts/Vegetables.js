@@ -5,6 +5,7 @@ export const Veggies = async () => {
     const response = await fetch ("http://localhost:8088/vegetables")
     const vegetables = await response.json()
     
+    //vegetable change listener
     document.addEventListener("change", handleVegetableChange);
 
     let html = "<h2>Vegetables</h2>";
@@ -22,7 +23,7 @@ export const Veggies = async () => {
     return html;
 }
 
-
+// vegetable change handler
 const handleVegetableChange = (changeEvent) => {
     if (changeEvent.target.id === "vegetables") {
        const chosenOption = changeEvent.target.value
