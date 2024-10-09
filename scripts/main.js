@@ -8,3 +8,7 @@ const renderAllHTML = async () => {
 
 renderAllHTML()
 
+document.addEventListener("newSaleMade", event => {
+    console.log("State of data has changed. Regenerating HTML...")
+    renderAllHTML()
+})

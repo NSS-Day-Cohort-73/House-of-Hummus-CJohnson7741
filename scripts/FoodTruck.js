@@ -2,6 +2,8 @@ import { Sales } from "./Sales.js"
 import { Veggies } from "./Vegetables.js"
 import { Sides } from "./SideDishes.js"
 import { entrees } from "./Entrees.js"
+import { saveOrder } from "./transientState.js"
+import { saveSale } from "./saveSales.js"
 
 
 export const FoodTruck = async () => {
@@ -11,6 +13,10 @@ export const FoodTruck = async () => {
     const sideDishes = await Sides()
     
     const entree = await entrees()
+
+    const saveButton = await saveSale()
+
+    const monthlyOrderHTML = await Sales()
 
     let html = ""
 
@@ -27,11 +33,12 @@ export const FoodTruck = async () => {
         <article>${sideDishes}</article>
 
         <article>
-            <button id="purchase">Purchase Combo</button>
+            ${saveButton}
         </article>
 
         <article class="customerOrders">
             <h2>Monthly Sales</h2>
+            ${monthlyOrderHTML}
             
         </article>
 
