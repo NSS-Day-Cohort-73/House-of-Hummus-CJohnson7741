@@ -56,10 +56,10 @@ sequenceDiagram
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Should transient state be represented in a database diagram? Why, or why not?
-   > Your answer here
+   > no. it makes the ERD over complicated. 
 2. In the **FoodTruck** module, you are **await**ing the invocataion of all of the component functions _(e.g. sales, veggie options, etc.)_. Why must you use the `await` keyword there? Explain what happens if you remove it.
-   > Your answer here
+   > await stops the code from executing before the data is retrieved. If you remove the await keyword the function will immediately return a promise object as opposed to the data it was supposed to fetch.
 3. When the user is making choices by selecting radio buttons, explain how that data is retained so that the **Purchase Combo** button works correctly.
-   > Your answer here
+   > the data is retained using change listeners and updating a transient state variable associated with that set of radio buttons.
 4. You used the `map()` array method in the self assessment _(at least, you should have since it is a learning objective)_. Explain why that function is helpful as a replacement for a `for..of` loop.
-   > Your answer here
+   > the .map() method returns a new array that is a copy of the array that was passed in modified by the function provided. This means that you can easily chain this function with other array methods without messing with the original array. In addition, it is more concise and less error prone due to the function implicitly iterating over the full array and returning on its own.

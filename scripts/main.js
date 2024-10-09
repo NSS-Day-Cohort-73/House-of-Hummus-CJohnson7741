@@ -8,6 +8,8 @@ const renderAllHTML = async () => {
 
 renderAllHTML()
 
+
+//when a new order is saved refresh HTML to display new order
 document.addEventListener("newSaleMade", event => {
     console.log("State of data has changed. Regenerating HTML...")
     renderAllHTML()

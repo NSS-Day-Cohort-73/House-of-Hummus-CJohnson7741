@@ -48,3 +48,20 @@ ul {
     text-align: center;
     margin: 1rem 0 3rem 2rem;
 }
+
+.flex-grid {
+    display: flex; /* Enables flexbox layout */
+    justify-content: space-between; /* Equally spaces items */
+    align-items: stretch; /* Makes all items the same height */
+    padding: 10px; /* Optional: adds padding inside the grid */
+}
+
+.flex-grid article {
+    flex: 1; /* Each article takes equal space */
+    margin: 0 10px; /* Adds margin between items */
+    border: 2px dotted blue; /* Dotted blue border around each article */
+    border-radius: 4px; /* Optional: rounded corners */
+    padding: 10px; /* Adds padding inside each article */
+    box-sizing: border-box; /* Ensures padding and border are included in total height/width */
+}
+

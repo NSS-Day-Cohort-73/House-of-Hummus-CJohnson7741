@@ -7,7 +7,7 @@ import { saveSale } from "./saveSales.js"
 
 
 export const FoodTruck = async () => {
-    //const salesHTML = await Sales()
+
     const vegetables = await Veggies()
     
     const sideDishes = await Sides()
@@ -26,11 +26,11 @@ export const FoodTruck = async () => {
             <h1 class="title">Laura Kathryn's House of Hummus</h1>
         </header>
 
-        <article>${vegetables}</article>
-
-        <article>${entree}</article>
-
-        <article>${sideDishes}</article>
+        <div class="flex-grid">
+            <article>${vegetables}</article>
+            <article>${entree}</article>
+            <article>${sideDishes}</article>
+        </div>
 
         <article>
             ${saveButton}
@@ -45,4 +45,3 @@ export const FoodTruck = async () => {
     `
     return html
 }
-// ${salesHTML}

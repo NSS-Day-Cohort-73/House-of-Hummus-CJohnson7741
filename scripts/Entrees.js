@@ -5,7 +5,7 @@ export const entrees = async () => {
     const response = await fetch ("http://localhost:8088/entrees")
     const entrees = await response.json()
     
-
+    //entrees change listener
     document.addEventListener("change", handleEntreesChange);
     let html = "<h2>Entrees</h2>";
 
@@ -23,7 +23,7 @@ export const entrees = async () => {
 }
 
 
-
+// entrees change handler
 const handleEntreesChange = (changeEvent) => {
     if (changeEvent.target.id === "entrees") {
        const chosenOption = changeEvent.target.value
